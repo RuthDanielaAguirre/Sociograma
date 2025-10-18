@@ -1,0 +1,140 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Variables CSS */
+:root {
+    --primary: rgb(178, 6, 201);
+    --primary-dark: rgb(67, 56, 202);
+    --secondary: rgb(124, 58, 237);
+    --gray-50: rgb(249, 250, 251);
+    --gray-100: rgb(243, 244, 246);
+    --gray-600: rgb(75, 85, 99);
+    --gray-900: rgb(17, 24, 39);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    line-height: 1.6;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utilidades personalizadas */
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Inputs personalizados */
+.input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-600);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.input-error {
+    border-color: rgb(239, 68, 68);
+}
+
+.error-message {
+    color: rgb(239, 68, 68);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #f4f1f4;
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Cards */
+.card {
+    background: #f4f1f4;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-100);
+}
+
+/* Fieldsets */
+fieldset {
+    border: 1px solid var(--gray-100);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    padding: 0 0.5rem;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--gray-900);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 0 1rem;
+    }
+    
+    fieldset {
+        padding: 1rem;
+    }
+}
