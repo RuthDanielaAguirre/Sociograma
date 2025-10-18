@@ -4,8 +4,8 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-600 mb-4 md:mb-0">
-                    <p class="font-medium">Sociograma DAW</p>
-                    <p class="text-sm text-gray-500 mt-1">Práctica 2 - MP07 Desenvolupament web en entorn servidor</p>
+                    <p class="font-medium">Sociograma</p>
+                    <p class="text-sm">Desarrollado por Ruth Daniela Aguirre Ávila</p>
                 </div>
                 <div class="flex items-center space-x-6 text-sm text-gray-500">
                     <a href="https://github.com/RuthDanielaAguirre/Sociograma" 
