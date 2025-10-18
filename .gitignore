@@ -1,0 +1,22 @@
+.env
+
+# Datos dinámicos
+src/data/*.json
+!src/data/.gitkeep
+
+# Docker
+.dockerignore
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencias 
+node_modules/

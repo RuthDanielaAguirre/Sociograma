@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: sociograma-php
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - TZ=${TZ}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - sociograma-network
+
+  db:
+    image: mysql:8.0
+    container_name: sociograma-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    networks:
+      - sociograma-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: sociograma-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: ${DB_HOST}
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - sociograma-network
+
+volumes:
+  mysql_data:
+
+networks:
+  sociograma-network:
+    driver: bridge
