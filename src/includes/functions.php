@@ -1,0 +1,77 @@
+<?php
+function load_json(string $path): array{
+    if(!file_exists($path)){
+        throw new Exception("Archivo no encontrado: $path\n");
+    }
+
+    $json_string = file_get_contents($path);
+    if ($json_string === false) {
+        throw new Exception("No se pudo leer el archivo: $path");
+    }
+
+    $data = json_decode($json_string, true);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        throw new Exception("JSON inválido: " . json_last_error_msg());
+    }
+
+    return $data;
+}
+
+
+function save_json(string $path, array $data): bool {
+$dir = dirname($path);
+if(!is_dir($dir)){
+    mkdir($dir, 0755, true);
+}
+$json_string = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+if ($json_string === false) {
+    throw new Exception("No se pudo codificar JSON: " . json_last_error_msg());
+}
+
+$result = file_put_contents($path, $json_string);
+
+if($result === false){
+
+throw new Exception("No se pudo guardar el archivo: $path");
+
+}
+
+return true;
+
+}
+
+//funciones de hidratacion
+
+function old_field(string $name, array $source = []): string {
+    if (isset($source[$name])) {
+        return htmlspecialchars($source[$name], ENT_QUOTES, 'UTF-8');
+    }
+    return '';
+}
+
+function old_checked(string $name, string $value, array $source = []): string{
+    if (isset($source[$name]) && $source[$name] == $value) {
+        return 'checked';
+    }
+
+    if (isset($source[$name]) && is_array($source[$name])) {
+        if (in_array($value, $source[$name])) {
+            return 'checked';
+        }
+    }
+    return '';
+}
+
+function old_selected(string $name, string $value, array $source = []): string{
+    if (isset($source[$name]) && $source[$name] == $value) {
+        return 'selected';
+    }
+
+    if (isset($source[$name]) && is_array($source[$name])) {
+        if (in_array($value, $source[$name])) {
+            return 'selected';
+        }
+    }
+    return '';
+}
