@@ -41,37 +41,3 @@ return true;
 
 }
 
-//funciones de hidratacion
-
-function old_field(string $name, array $source = []): string {
-    if (isset($source[$name])) {
-        return htmlspecialchars($source[$name], ENT_QUOTES, 'UTF-8');
-    }
-    return '';
-}
-
-function old_checked(string $name, string $value, array $source = []): string{
-    if (isset($source[$name]) && $source[$name] == $value) {
-        return 'checked';
-    }
-
-    if (isset($source[$name]) && is_array($source[$name])) {
-        if (in_array($value, $source[$name])) {
-            return 'checked';
-        }
-    }
-    return '';
-}
-
-function old_selected(string $name, string $value, array $source = []): string{
-    if (isset($source[$name]) && $source[$name] == $value) {
-        return 'selected';
-    }
-
-    if (isset($source[$name]) && is_array($source[$name])) {
-        if (in_array($value, $source[$name])) {
-            return 'selected';
-        }
-    }
-    return '';
-}

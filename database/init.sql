@@ -44,10 +44,10 @@ CREATE TABLE IF NOT EXISTS respuestas (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- INDICES para búsquedas rápidas
-    INDEX idx_nombre (nombre),
-    INDEX idx_grupo (grupo),
-    INDEX idx_fecha (fecha_respuesta)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
+CREATE INDEX idx_nombre ON respuestas (nombre);
+CREATE INDEX idx_grupo ON respuestas (grupo);
+CREATE INDEX idx_fecha ON respuestas (fecha_respuesta);
 
 -- Dato de ejemplo para testing (cumple todas las restricciones)
 INSERT INTO respuestas (
