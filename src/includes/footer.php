@@ -1,6 +1,6 @@
 </main>
 
-<footer class="backdrop-blur-md bg-[rgba(255,255,255,0.08)] border-t border-[rgba(255,255,255,0.15)] text-[var(--text-color)] py-4 text-center">
+<footer class="backdrop-blur-md  border-t  text-[var(--text-color)] py-4 text-center">
         <div class="max-w-5xl mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-yellow-600 mb-4 md:mb-0">
