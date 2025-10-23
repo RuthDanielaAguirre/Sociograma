@@ -7,7 +7,7 @@ function oldField(string $key, array $old_data = []):string{
 }
 
 
-function oldChecked(string $key, string $value, array $old_data = []):string{
+function oldCheckbox(string $key, string $value, array $old_data = []):string{
     if(isset($old_data[$key])){
         if(in_array($value, (array)$old_data[$key])){
             return 'checked';
