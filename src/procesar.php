@@ -9,11 +9,8 @@
 
 session_start();
 
-echo "POST recibido:<br>";
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-die("Debug - Detener aquí");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 require_once __DIR__ . '/includes/constants.php';
 require_once __DIR__ . '/includes/validation.php';
