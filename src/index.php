@@ -21,10 +21,11 @@ require_once __DIR__ . '/includes/header.php';
 
 
 <div class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+    <main class="max-w-5xl mx-auto px-6 py-12 glass text-left">
+
         
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Sociograma DAW</h1>
-        <p class="text-gray-600 mb-8">Cuestionario sobre preferencias de colaboración en el aula</p>
+        <h1 class="text-3xl font-bold text-white mb-2">Sociograma DAW</h1>
+        <p class="text-white mb-8">Cuestionario sobre preferencias de colaboración en el aula</p>
         
         <?php if (!empty($errores)): ?>
         <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-6">
@@ -42,11 +43,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 1: IDENTIFICACIÓN -->
 
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">1. Identificación</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">1. Identificación</h2>
                 
                 <!-- Nombre -->
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="nombre" class="block text-sm font-medium text-white mb-2">
                         Nombre completo <span class="text-red-500">*</span>
                     </label>
                     <input 
@@ -64,7 +65,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Grupo -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Grupo <span class="text-red-500">*</span>
                     </label>
                     <div class="flex gap-6">
@@ -86,7 +87,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Email -->
                 <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="email" class="block text-sm font-medium text-white mb-2">
                         Email
                     </label>
                     <input 
@@ -104,11 +105,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 2: PREFERENCIAS DE COLABORACIÓN -->
 
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">2. Preferencias de Colaboración</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">2. Preferencias de Colaboración</h2>
                 
                 <!-- Preferido 1 -->
                 <div class="mb-4">
-                    <label for="preferido_1" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="preferido_1" class="block text-sm font-medium text-white mb-2">
                         Compañero/a preferido/a 1
                     </label>
                     <input 
@@ -124,7 +125,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Preferido 2 -->
                 <div class="mb-4">
-                    <label for="preferido_2" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="preferido_2" class="block text-sm font-medium text-white mb-2">
                         Compañero/a preferido/a 2
                     </label>
                     <input 
@@ -140,7 +141,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Evitar -->
                 <div class="mb-4">
-                    <label for="evitar_1" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="evitar_1" class="block text-sm font-medium text-white mb-2">
                         Compañero/a a evitar
                     </label>
                     <input 
@@ -156,7 +157,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Motivo -->
                 <div class="mb-4">
-                    <label for="motivo_preferencia" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="motivo_preferencia" class="block text-sm font-medium text-white mb-2">
                         Motivo de tu preferencia
                     </label>
                     <textarea 
@@ -174,11 +175,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 3: ROL Y HABILIDADES -->
 
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">3. Rol y Habilidades</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">3. Rol y Habilidades</h2>
                 
                 <!-- Rol habitual -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Rol habitual en proyectos
                     </label>
                     <div class="grid grid-cols-2 gap-3">
@@ -199,7 +200,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Lenguaje fuerte -->
                 <div class="mb-4">
-                    <label for="lenguaje_fuerte" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="lenguaje_fuerte" class="block text-sm font-medium text-white mb-2">
                         Lenguaje más fuerte
                     </label>
                     <select 
@@ -218,7 +219,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Experiencia proyectos -->
                 <div class="mb-4">
-                    <label for="experiencia_proyectos" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="experiencia_proyectos" class="block text-sm font-medium text-white mb-2">
                         Número de proyectos realizados (<?= EXPERIENCIA_MIN ?>-<?= EXPERIENCIA_MAX ?>)
                     </label>
                     <input 
@@ -237,11 +238,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 4: DINÁMICA Y COMUNICACIÓN -->
 
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">4. Dinámica y Comunicación</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">4. Dinámica y Comunicación</h2>
                 
                 <!-- Tipo de comunicación -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Tipo de comunicación preferida
                     </label>
                     <div class="space-y-2">
@@ -269,7 +270,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Herramientas (checkboxes) -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Herramientas que usas (puedes marcar varias)
                     </label>
                     <div class="space-y-2">
@@ -291,7 +292,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Disponibilidad horaria -->
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                        <label for="disponibilidad_hora_inicio" class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="disponibilidad_hora_inicio" class="block text-sm font-medium text-white mb-2">
                             Disponibilidad desde
                         </label>
                         <input 
@@ -303,7 +304,7 @@ require_once __DIR__ . '/includes/header.php';
                         >
                     </div>
                     <div>
-                        <label for="disponibilidad_hora_fin" class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="disponibilidad_hora_fin" class="block text-sm font-medium text-white mb-2">
                             Disponibilidad hasta
                         </label>
                         <input 
@@ -319,11 +320,11 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- SECCIÓN 5: ORGANIZACIÓN Y BIENESTAR -->
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">5. Organización y Bienestar</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">5. Organización y Bienestar</h2>
                 
                 <!-- Gestión del tiempo -->
                 <div class="mb-4">
-                    <label for="gestion_tiempo" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="gestion_tiempo" class="block text-sm font-medium text-white mb-2">
                         Capacidad de gestión del tiempo
                     </label>
                     <select 
@@ -342,7 +343,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Nivel de estrés (range) -->
                 <div class="mb-4">
-                    <label for="estres_proyecto" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="estres_proyecto" class="block text-sm font-medium text-white mb-2">
                         Nivel de estrés en proyectos (<?= ESTRES_MIN ?>=bajo, <?= ESTRES_MAX ?>=alto)
                     </label>
                     <input 
@@ -355,12 +356,12 @@ require_once __DIR__ . '/includes/header.php';
                         class="w-full"
                         oninput="this.nextElementSibling.textContent = this.value"
                     >
-                    <div class="text-center text-sm font-medium text-gray-700 mt-2"><?= oldField('estres_proyecto', $oldData) ?: 3 ?></div>
+                    <div class="text-center text-sm font-medium text-white mt-2"><?= oldField('estres_proyecto', $oldData) ?: 3 ?></div>
                 </div>
                 
                 <!-- Preferencia espacio -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Preferencia de espacio de trabajo
                     </label>
                     <div class="space-y-2">
@@ -390,11 +391,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 6: LOGÍSTICA -->
            
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4"> 6. Logística</h2>
+                <h2 class="text-xl font-semibold text-white mb-4"> 6. Logística</h2>
                 
                 <!-- Tipo de dispositivo -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Tipo de dispositivo
                     </label>
                     <div class="flex gap-6">
@@ -415,7 +416,7 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Sistema operativo -->
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block text-sm font-medium text-white mb-2">
                         Sistema operativo preferido
                     </label>
                     <div class="flex gap-6">
@@ -436,14 +437,14 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Color equipo -->
                 <div class="mb-4">
-                    <label for="color_equipo" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="color_equipo" class="block text-sm font-medium text-white mb-2">
                         Color favorito para identificar tu equipo
                     </label>
                     <input 
                         type="color" 
                         id="color_equipo" 
                         name="color_equipo"
-                        value="<?= oldField('color_equipo', $oldData) ?: '#3b82f6' ?>"
+                        value="<?= oldField('color_equipo', $oldData) ?: '#bd2553ff' ?>"
                         class="h-12 w-24 border border-gray-300 rounded-lg cursor-pointer"
                     >
                 </div>
@@ -452,11 +453,11 @@ require_once __DIR__ . '/includes/header.php';
             <!-- SECCIÓN 7: OBSERVACIONES -->
             
             <div class="border-b pb-6">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">7. Observaciones</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">7. Observaciones</h2>
                 
                 
                 <div class="mb-4">
-                    <label for="comentarios" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="comentarios" class="block text-sm font-medium text-white mb-2">
                         Comentarios adicionales
                     </label>
                     <textarea 
@@ -471,7 +472,7 @@ require_once __DIR__ . '/includes/header.php';
                 
             
                 <div class="mb-4">
-                    <label for="fecha_respuesta" class="block text-sm font-medium text-gray-700 mb-2">
+                    <label for="fecha_respuesta" class="block text-sm font-medium text-white mb-2">
                         Fecha de respuesta <span class="text-red-500">*</span>
                     </label>
                     <input 
@@ -486,8 +487,8 @@ require_once __DIR__ . '/includes/header.php';
             </div>
             
           
-            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 font-medium transition-colors shadow-md hover:shadow-lg">
-                📤 Enviar 
+            <button type="submit" class="w-full bg-yellow-700 text-white py-3 px-6 rounded-lg hover:bg-yellow-600 font-medium transition-colors shadow-md hover:shadow-lg">
+                Enviar 
             </button>
             
         </form>

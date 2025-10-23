@@ -20,3 +20,4 @@ Thumbs.db
 
 # Dependencias 
 node_modules/
+.env
